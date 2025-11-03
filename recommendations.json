@@ -1,0 +1,118 @@
+{
+  "model_id": "1i9rnat96qbfu6dgoq1ofq1rudlbhhcg26uggo79nuuiln43gn8magbmahu4onqnois8tjfq04ucrunrebus36cugfg83psavg2d7nl",
+  "recommendations": {
+    "current": {
+      "risk": {
+        "domain#RiskLevelHigh": 0,
+        "domain#RiskLevelMedium": 2,
+        "domain#RiskLevelVeryHigh": 0,
+        "domain#RiskLevelLow": 0,
+        "domain#RiskLevelVeryLow": 1805
+      },
+      "consequences": [
+        {
+          "asset": {
+            "label": "PatientMeasurements",
+            "type": "domain#HealthData",
+            "uri": "system#723a8052",
+            "identifier": "eb4dac43",
+            "additionalProperties": null
+          },
+          "label": "Loss Of Confidentiality",
+          "description": "Disclosure of data (which may be embedded in an IoT device) to unauthorised parties, or a state where prevention or detection of such a disclosure cannot be ensured.",
+          "impact": "domain#ImpactLevelMedium",
+          "likelihood": "domain#LikelihoodMedium",
+          "risk": "domain#RiskLevelMedium",
+          "uri": "system#MS-LossOfConfidentiality-eb4dac43"
+        },
+        {
+          "asset": {
+            "label": "Treatment",
+            "type": "domain#HealthData",
+            "uri": "system#52c52876",
+            "identifier": "6b054a39",
+            "additionalProperties": null
+          },
+          "label": "Loss Of Confidentiality",
+          "description": "Disclosure of data (which may be embedded in an IoT device) to unauthorised parties, or a state where prevention or detection of such a disclosure cannot be ensured.",
+          "impact": "domain#ImpactLevelMedium",
+          "likelihood": "domain#LikelihoodMedium",
+          "risk": "domain#RiskLevelMedium",
+          "uri": "system#MS-LossOfConfidentiality-6b054a39"
+        }
+      ]
+    },
+    "recommendations": [
+      {
+        "identifier": 0,
+        "controlStrategies": [
+          {
+            "uri": "system#CSG-UserSecurityTraining_M_91469019",
+            "description": "Users in the role \\\"Human\\\" are trained to avoid most common cyber security errors by using only strong passwords, recognising malicious emails, and the importance of physical security including the use of screen locking for fixed devices that cannot be carried on the person.",
+            "category": "Conditional"
+          }
+        ],
+        "controls": [
+          {
+            "label": "SecurityTraining",
+            "description": "The human has undergone security training, going beyond basic password and device security and covering aspects such as malicious email threats, and physical security of mobile and fixed host devices.",
+            "uri": "system#CS-SecurityTraining-e1b4df97",
+            "asset": {
+              "label": "Human",
+              "type": "domain#Human",
+              "uri": "system#22398c89",
+              "identifier": "e1b4df97",
+              "additionalProperties": null
+            },
+            "action": "Enable control"
+          }
+        ],
+        "state": {
+          "risk": {
+            "domain#RiskLevelHigh": 0,
+            "domain#RiskLevelMedium": 0,
+            "domain#RiskLevelVeryHigh": 0,
+            "domain#RiskLevelLow": 2,
+            "domain#RiskLevelVeryLow": 1805
+          },
+          "consequences": []
+        }
+      },
+      {
+        "identifier": 1,
+        "controlStrategies": [
+          {
+            "uri": "system#CSG-PersonalDeviceProtection_M_cdf1b75e",
+            "description": "Device \\\"Patients_Phone\\\" is a personal device dedicated to one user, who will protect it from some types of attacks involving physical access. This particular strategy relates to threats that are blocked, affording slightly less than perfect protection because the user may be overcome by force or become temporarily less than vigilant.",
+            "category": "Conditional"
+          }
+        ],
+        "controls": [
+          {
+            "label": "PersonalDevice",
+            "description": "The host is a personal device, carried by and therefore monitored and protected by its only user.",
+            "uri": "system#CS-PersonalDevice-c063373d",
+            "asset": {
+              "label": "Patients_Phone",
+              "type": "domain#Smartphone",
+              "uri": "system#971dafce",
+              "identifier": "c063373d",
+              "additionalProperties": null
+            },
+            "action": "Enable control"
+          }
+        ],
+        "state": {
+          "risk": {
+            "domain#RiskLevelHigh": 0,
+            "domain#RiskLevelMedium": 0,
+            "domain#RiskLevelVeryHigh": 0,
+            "domain#RiskLevelLow": 2,
+            "domain#RiskLevelVeryLow": 1805
+          },
+          "consequences": []
+        }
+      }
+    ]
+  }
+}
